@@ -1,14 +1,14 @@
 {
-  "name": "APPNAME",
+  "name": "snake-io",
   "private": true,
   "packageManager": "pnpm@10.30.3",
   "engines": { "node": ">=22" },
   "pnpm": { "onlyBuiltDependencies": ["esbuild"] },
   "scripts": {
-    "dev": "pnpm --filter @APPNAME/web dev",
-    "build": "pnpm --filter @APPNAME/web build",
-    "preview": "pnpm --filter @APPNAME/web preview",
-    "typecheck": "pnpm --filter @APPNAME/web exec tsc -b",
-    "test": "pnpm --filter @APPNAME/web test"
+    "dev": "pnpm --filter @snake-io/web dev",
+    "build": "pnpm --filter @snake-io/web build",
+    "preview": "pnpm --filter @snake-io/web preview",
+    "typecheck": "pnpm --filter @snake-io/web exec tsc -b",
+    "test": "pnpm --filter @snake-io/web test"
   }
 }
