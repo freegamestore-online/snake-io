@@ -41,9 +41,9 @@ export default defineConfig({
       // field passes through to the emitted manifest.webmanifest; browsers
       // ignore unknown members.
       manifest: {
-        name: "snake.io",
-        short_name: "snake.io",
-        description: "snake.io — free forever",
+        name: "Slither Arena",
+        short_name: "Slither Arena",
+        description: "Slither Arena — free forever",
         start_url: "/",
         display: "standalone",
         background_color: "#0f0f0f",

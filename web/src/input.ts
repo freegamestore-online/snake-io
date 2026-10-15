@@ -21,8 +21,8 @@ export function attachInput(canvas: HTMLCanvasElement): { state: PointerState; d
   const onMouseMove = (e: MouseEvent) => toLocal(e.clientX, e.clientY);
   const onMouseDown = (e: MouseEvent) => { state.held = true; toLocal(e.clientX, e.clientY); };
   const onMouseUp = () => { state.held = false; };
-  const onTouchStart = (e: TouchEvent) => { e.preventDefault(); state.held = true; toLocal(e.touches[0].clientX, e.touches[0].clientY); };
-  const onTouchMove = (e: TouchEvent) => { e.preventDefault(); toLocal(e.touches[0].clientX, e.touches[0].clientY); };
+  const onTouchStart = (e: TouchEvent) => { e.preventDefault(); state.held = true; toLocal(e.touches[0]!.clientX, e.touches[0]!.clientY); };
+  const onTouchMove = (e: TouchEvent) => { e.preventDefault(); toLocal(e.touches[0]!.clientX, e.touches[0]!.clientY); };
   const onTouchEnd = () => { state.held = false; };
 
   canvas.addEventListener("mousemove", onMouseMove);

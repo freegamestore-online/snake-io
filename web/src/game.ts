@@ -1,4 +1,4 @@
-// snake.io — smooth 360° snake on a raw canvas 2D loop.
+// Slither Arena — smooth 360° snake on a raw canvas 2D loop.
 // Steer with the mouse / your finger; hold to boost (costs a little length);
 // eat the glowing dots to grow; touch your own body and it's game over.
 //
@@ -57,7 +57,7 @@ export function startGame(canvas: HTMLCanvasElement, onScore: (n: number) => voi
 
     if (phase === "playing") {
       // steer toward the pointer; hold = boost
-      const head = snake.segs[0];
+      const head = snake.segs[0]!;
       if (input.state.active) {
         snake.targetAngle = Math.atan2(input.state.y - head.y, input.state.x - head.x);
       }
@@ -65,7 +65,7 @@ export function startGame(canvas: HTMLCanvasElement, onScore: (n: number) => voi
       updateSnake(snake, dt);
 
       // soft walls: wrap around the screen (move ANYWHERE — no wall deaths)
-      const h2 = snake.segs[0];
+      const h2 = snake.segs[0]!;
       if (h2.x < -SEG_RADIUS) h2.x = w + SEG_RADIUS;
       if (h2.x > w + SEG_RADIUS) h2.x = -SEG_RADIUS;
       if (h2.y < -SEG_RADIUS) h2.y = h + SEG_RADIUS;
@@ -73,7 +73,7 @@ export function startGame(canvas: HTMLCanvasElement, onScore: (n: number) => voi
 
       // eat food
       for (let i = foods.length - 1; i >= 0; i--) {
-        const f = foods[i];
+        const f = foods[i]!;
         const dx = h2.x - f.x;
         const dy = h2.y - f.y;
         if (dx * dx + dy * dy < (SEG_RADIUS + f.r + 4) ** 2) {

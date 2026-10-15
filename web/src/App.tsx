@@ -20,7 +20,7 @@ export default function App() {
   }, []);
 
   return (
-    <GameShell topbar={<GameTopbar title="snake.io" score={score} />}>
+    <GameShell topbar={<GameTopbar title="Slither Arena" score={score} />}>
       {/* KAPLAY letterboxes its fixed virtual resolution to fill this box. */}
       <canvas ref={canvasRef} className="w-full h-full block touch-none" />
     </GameShell>

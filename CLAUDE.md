@@ -1,4 +1,4 @@
-# snake.io
+# Slither Arena
 
 A free game on FreeGameStore, built on the **KAPLAY** browser game engine.
 

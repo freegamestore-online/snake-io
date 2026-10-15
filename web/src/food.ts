@@ -16,7 +16,7 @@ export function makeFood(w: number, h: number): Food {
     x: 30 + Math.random() * (w - 60),
     y: 30 + Math.random() * (h - 60),
     r: 5 + Math.random() * 4,
-    color: COLORS[Math.floor(Math.random() * COLORS.length)],
+    color: COLORS[Math.floor(Math.random() * COLORS.length)]!,
     pulse: Math.random() * Math.PI * 2,
   };
 }
